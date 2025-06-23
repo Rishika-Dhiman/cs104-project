@@ -1,0 +1,84 @@
+bird_rect.bottom>=block_rect.top and bird_rect.right
+///////////////////////////////
+
+            # for i, block_rectcol in enumerate(block_rectlist):
+            #     for j, block_rect in enumerate(block_rectcol):
+            #         length=len(block_rectcol)
+            #         if bird_rect.colliderect(block_rect):
+            #             if abs(bird_rect.centerx-block_rect.centerx)<abs(bird_rect.centery-block_rect.centery) and j==length-1:
+            #                 bird_rect.bottom=block_rect.top
+            #                 y_speed=-y_speed
+            #             else:
+            #                 #bird_rect.centerx<block_rect.centerx
+            #                 bird_rect.right=block_rect.left
+            #                 x_speed=-x_speed
+            #             hit=True
+            #             block_list[i][j].health-=bird.getDamage(block_list[i][j].type)
+            #             if block_list[i][j].health>0:
+            #                 block_surfacelist[i][j]=pygame.transform.scale(pygame.image.load(block_list[i][j].getImage()),(54,54))
+            #             break
+            #     if hit==True:
+            #         break
+
+///////////////////////////////
+
+#bird_rect.centerx<block_rect.centerx
+
+////////////////////////////////
+
+            # if player==1:
+            #     dist_sling=math.dist((mouse_x,mouse_y),(p.sling1[0],p.sling1[1]))
+            #     dirtheta=math.atan2(p.sling1[1]-mouse_y,p.sling1[0]-mouse_x)
+            # else:
+            #     dist_sling=math.dist((mouse_x,mouse_y),(p.sling2[0],p.sling2[1]))
+            #     dirtheta=math.atan2(p.sling2[1]-mouse_y,p.sling2[0]-mouse_x)
+            # 
+            # mass=15
+            # vconst=math.sqrt(p.kstring/mass)
+            # speed=vconst*dist_sling
+
+
+if getdamage gives a value greater than health than take health otherwise getdamage, try to make a variable for getdamage to make things easier
+in gamened function use max score
+
+nothing will happen on clicking while there is countdown i.e. first four seconds of the game
+
+//////////////////////////////////////////////////////////////////////
+#submit 
+    # submit='Submit'
+    # submit_surface=font60.render(submit,True,p.Black)
+    # submit_rect=submit_surface.get_rect(center=(p.size[0]//2,550))
+
+#pygame.draw.rect(screen, p.White,(submit_rect.left-7, submit_rect.top-7, submit_rect.right-submit_rect.left+14, submit_rect.bottom-submit_rect.top+14), border_radius=10)
+
+________________________________________________________________________________
+
+            p.size=(width,height)
+            background=pygame.image.load('background.jpg')
+            background=pygame.transform.scale(background, (p.size))
+            sling1_rect.center=(350,p.size[1]-168)
+            sling2_rect.center=(334,p.size[1]-198)
+            sling3_rect.center=(p.size[0]-350,p.size[1]-168)
+            sling4_rect.center=(p.size[0]-334,p.size[1]-198)
+            name_rect1=name_surface1.get_rect(center=(200,100))
+            name_rect2=name_surface2.get_rect(center=(p.size[0]-200,100))
+            pause_rect=pause_surface.get_rect(center=(50,50))
+            settings_rect=settings_surface.get_rect(center=(100,50))
+
+
+#resizing transformations
+        pause_surface=pygame.transform.scale(pause_surface,(width*0.03125,height*0.05556))
+        pause_rect=pause_surface.get_rect(center=(width*0.039063,height*0.069444))
+        settings_surface=pygame.transform.scale(settings_surface,(width*0.03203,height*0.056944))
+        settings_rect=settings_surface.get_rect(center=(width*0.078125,height*0.069444))
+        motiontext_rect=motiondots_text.get_rect(center=(width*0.078125,height*0.069444))
+        sling1=pygame.transform.scale(sling1,(80,160))
+        sling1_rect=sling1.get_rect(center=(350,p.size[1]-168))
+        sling2=pygame.transform.scale(sling2,(50,100))
+        sling2_rect=sling2.get_rect(center=(334,p.size[1]-198))
+        sling3=pygame.transform.scale(sling3,(80,160))
+        sling3_rect=sling3.get_rect(center=(p.size[0]-350,p.size[1]-168))
+        sling4=pygame.transform.scale(sling4,(50,100))
+        sling4_rect=sling4.get_rect(center=(p.size[0]-334,p.size[1]-198))
+
+        width,height=pygame.display.get_surface().get_size()
